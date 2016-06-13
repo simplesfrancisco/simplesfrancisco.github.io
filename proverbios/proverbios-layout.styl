@@ -1,0 +1,77 @@
+col(width = null)
+  float left
+  display block
+  position relative
+  if(width)
+    width width
+
+$absolute-center
+  position absolute
+  top 50%
+  left 50%
+  transform translate(-50%, -50%)
+
+$screenWidth = 1140px
+$cols = 1..12
+
+gridGenerator(grid, desc)
+  for col in grid
+    .col-{desc}-{col}
+      width percentage(col/12)
+
+.container
+  width $screenWidth
+  margin 0 auto
+  position relative
+  &:not(.container-table)
+    display block
+
+.container-table
+  display table
+
+[class^="col-"]
+[class*="col-"]
+  display block
+  position relative
+  min-height 1px
+  padding-right 15px
+  padding-left 15px
+  &:not(.col-center)
+    float left
+  &.col-xs-center
+    display table
+    margin 0 auto
+  @media(min-width 480px)
+    &.col-sm-center
+      display table
+      margin 0 auto
+  @media(min-width 980px)
+    &.col-md-center
+      display table
+      margin 0 auto
+  @media(min-width 1200px)
+    &.col-lg-center
+      display table
+      margin 0 auto
+
+.box
+  display table
+  width 100%
+
+@media (min-width: 768px)
+  .col-center-sm
+    float none
+    margin 0 auto
+
+gridGenerator($cols, "xs")
+
+@media (min-width 768px)
+  gridGenerator($cols, "sm")
+
+@media (min-width 988px)
+  gridGenerator($cols, "md")
+
+@media (min-width 1200px)
+  gridGenerator($cols, "lg")
+
+// TODO: Utilitarios de visibilidade (xs-hidden, xs-block...)
