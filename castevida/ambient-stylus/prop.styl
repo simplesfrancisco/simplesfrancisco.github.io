@@ -1,0 +1,42 @@
+$container-w = 1170px
+$glutter  = 15px
+
+size($a, $b = null)
+	width $a
+	if($b)
+		height $b
+	else
+		height $a
+
+td($a)
+	vertical-align middle
+	display table-cell
+	height $a
+	
+bg($a, $b = null, $c = null)
+	background $a
+	if($b)
+		background-repeat $b
+	if($c)
+		background-position $c
+
+container()
+	max-width $container-w
+	padding 0 $glutter
+	margin 0 auto
+	
+box()
+	width 100%
+	display table
+	
+row()
+	margin-right -($glutter)
+	margin-left -($glutter)
+	
+col($a = null)
+	float left
+	display block
+	padding 0 $glutter
+	if($a)
+		width $a
+	

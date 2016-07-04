@@ -1,0 +1,261 @@
+// RESET
+// Autor: Francisco Santos
+
+.reset
+	height 100%
+	
+	*
+		margin 0
+		padding 0
+		box-sizing border-box
+		border 0
+	
+	ul
+		list-style none
+	
+	header
+	footer
+	section
+		display table
+		width 100%
+		position relative
+	
+	a
+		text-decoration none
+	
+	*:focus
+		outline none
+	
+	input
+	textarea
+		width 100%
+		font-size inherit
+		font-family inherit
+	
+	button
+	input[type="submit"]
+		cursor pointer
+	
+	input[type="submit"]
+		width auto
+	
+	table
+		width 100%
+		border-collapse collapse
+		border-spacing 0
+	
+	body
+		line-height 1
+		height 100%
+		overflow-x hidden
+	
+	li a:only-child
+		display block
+	
+	img
+		max-width 100%
+
+
+waSpaceGenerator('margin', 'm')
+waSpaceGenerator('padding', 'p')
+		
+// Layout
+// Autor: Francisco Santos (Baseado no Boostrap)
+
+.container
+	padding-right 15px
+	padding-left 15px
+	display block
+	margin 0 auto
+	@media (min-width: 1200px)
+		width 1170px
+
+.box
+	width 100%
+	display table
+	position relative
+
+.row
+	display block
+	margin-left -15px
+	margin-right -15px
+	
+[class^="col-"]
+[class*="col-"]
+	float left
+	display block
+	padding-right 15px
+	padding-left 15px
+	position relative
+	
+@media (max-width 768px)
+	[class^="col-lg"] + [class*="col-lg"],
+	[class^="col-md"] + [class*="col-md"],
+	[class^="col-sm"] + [class*="col-sm"]
+		margin-top 30px
+	
+waGridGenerator('xs')		
+		
+@media (min-width: 768px)
+	waGridGenerator('sm')
+	
+@media (min-width: 992px)
+	waGridGenerator('md')
+	
+@media (min-width: 1200px)
+	waGridGenerator('lg')
+
+@media (max-width 768px)
+	.hide-xs
+		display none
+
+@media (max-width 992px)
+	.hide-sm
+		display none
+		
+@media (max-width 1200px)
+	.hide-md
+		display none
+		
+@media (min-width 1200px)
+	.hide-lg
+		display none
+			
+
+.grid-child
+	float left
+	display block
+	position relative
+
+.grid-2
+	.grid-child
+		width percentage(6/12)	
+	.grid-child:nth-child(6n + 1)
+		clear both
+		
+.grid-3
+	.grid-child
+		width percentage(4/12)	
+	.grid-child:nth-child(3n + 1)
+		clear both
+		
+.grid-4
+	.grid-child
+		width percentage(3/12)
+	.grid-child:nth-child(4n + 1)
+		clear both
+		
+.grid-5
+	.grid-child
+		width percentage(5/10)
+	.grid-child:nth-child(5n + 1)
+		clear both
+
+
+.box-center
+	display table
+	margin 0 auto
+	width auto
+
+// UTIL
+// Autor: Francisco Santos
+		
+.padding
+	padding 15px
+	
+.margin
+	margin 15px
+	
+.block
+	display block
+	
+.inb
+	display inline-block
+	
+.text-center
+	text-align center
+	.td
+		text-align initial
+		
+.text-upper
+	text-transform uppercase
+	
+.text-lower
+	text-transform lowercase
+	
+.text-cap
+	text-transform capitalize
+	
+.text-left
+	text-align left
+	
+.text-right
+	text-align right
+	
+.td
+	display table-cell
+	vertical-align middle
+	
+.abs
+	position absolute
+	
+.rlt
+	position relative
+	
+.hide
+	display none
+	
+.show
+	display block
+
+.img-fit
+	height 100%
+	width 100%
+	object-fit cover
+	
+.overflow
+	overflow hidden
+
+.pointer
+	cursor pointer
+	
+.menu-x
+	font-size 0
+	.menu-child
+		font-size initial
+		display inline-block
+		a, span
+			display block
+		a
+			cursor pointer
+			
+.menu-y
+	.menu-child
+		width 100%
+		display table
+		a, span
+			display block
+		a
+			cursor pointer
+			
+.right
+	float right
+	
+.left
+	float left
+
+.abs-center-y
+	position absolute
+	top 50%
+	transform translateY(-50%)
+	
+.abs-center-x
+	position absolute
+	left 50%
+	transform translateX(-50%)
+	
+.abs-center
+	left 50%
+	top 50%
+	transform translate(-50%, -50%)
+	position absolute

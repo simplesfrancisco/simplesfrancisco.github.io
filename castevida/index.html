@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="reset">
+<head>
+	<meta charset="UTF-8">
+	<title>Castevida</title>
+	<script type="text/javascript" src="vue.min.js"></script>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body id="castevida">
+	<main class="quotes">
+		<article class="quote" v-for="quote in quotes">
+			{{ quote }}
+		</article>
+	</main>
+</body>
+<script type="text/javascript" src="data.js"></script>
+<script type="text/javascript" src="script.js"></script>
+</html>

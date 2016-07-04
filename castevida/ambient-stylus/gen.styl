@@ -1,0 +1,85 @@
+waGridGenerator(name)
+
+	for each in range(5, 100, 5)
+		
+		.col-{name}-{each}
+			width round(percentage(each/100))
+			
+		.px-{name}-{each}
+			padding-right round(percentage(each/100))
+			padding-left round(percentage(each/100))
+			
+		.pr-{name}-{each}
+			padding-right round(percentage(each/100))
+			
+		.pl-{name}-{each}
+			padding-left round(percentage(each/100))
+			
+
+			
+waSpaceGenerator(name, abr)
+	
+	for each in range(5px, 100px, 5)
+		.{abr}-{each}
+			@media (min-width 768px)
+				{name} each
+			@media (max-width 768px)
+				{name} (each / 1.5)
+				
+	for each in range(5px, 100px, 5)
+		.{abr}x-{each}
+			@media (min-width 768px)
+				{name}-left each
+				{name}-right each
+			@media (max-width 769px)
+				{name}-left (each / 1.5)
+				{name}-right (each / 1.5)
+	
+	for each in range(5px, 100px, 5)
+		.{abr}y-{each}
+			@media (min-width 768px)
+				{name}-top each
+				{name}-bottom each
+			@media (max-width 769px)
+				{name}-top (each / 1.5)
+				{name}-bottom (each / 1.5)
+	
+	for each in range(5px, 100px, 5)
+		.{abr}b-{each}
+			@media (min-width 768px)
+				{name}-bottom each
+			@media (max-width 768px)
+				{name}-bottom (each / 1.5)
+		if(name != "padding")
+			.{abr}b--{each}
+				@media (min-width 768px)
+					{name}-bottom each
+				@media (max-width 768px)
+					{name}-bottom -(each / 1.5)
+	
+	for each in range(5px, 100px, 5)
+		.{abr}t-{each}
+			@media (min-width 768px)
+				{name}-top each
+			@media (max-width 768px)
+				{name}-top (each / 1.5)
+		if(name != "padding")
+			.{abr}t--{each}
+				@media (min-width 768px)
+					{name}-top -(each)
+				@media (max-width 768px)
+					{name}-top -(each / 1.5)
+	
+	for each in range(5px, 100px, 5)
+		.{abr}l-{each}
+			@media (min-width 768px)
+				{name}-left each
+			@media (max-width 768px)
+				{name}-left (each / 2)
+				
+	for each in range(5px, 100px, 5)
+		.{abr}r-{each}
+			@media (min-width 768px)
+				{name}-right each
+			@media (max-width 768px)
+				{name}-right (each / 2)
