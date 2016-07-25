@@ -52,21 +52,6 @@ $('.ch').on('click', function(){
 			$(this).parent().addClass('complete');
 			$(this).parent().removeClass('current');
 			$(this).parent().next().addClass('current').show();
-			if($('.field-0').hasClass('complete')){
-				$('.tentativas').text('1');
-			}
-			if($('.field-1').hasClass('complete')){
-				$('.tentativas').text('2');
-			}
-			if($('.field-2').hasClass('complete')){
-				$('.tentativas').text('3');
-			}
-			if($('.field-3').hasClass('complete')){
-				$('.tentativas').text('4');
-			}
-			if($('.field-4').hasClass('complete')){
-				$('.tentativas').text('5');
-			}
 			if($('.field-4').hasClass('complete')){
 				$('.arenaOver').show();
 			}
