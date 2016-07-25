@@ -67,6 +67,9 @@ $('.ch').on('click', function(){
 			if($('.field-4').hasClass('complete')){
 				$('.tentativas').text('5');
 			}
+			if($('.field-4').hasClass('complete')){
+				$('.arenaOver').show();
+			}
 		} else {
 			$('.arenaGameOver').show();
 		}
@@ -85,5 +88,7 @@ function jogar(){
 function recomecar(){
 	location.reload();
 }
+
+$('.arenaOver').hide();
 
 $('.arenaGameOver').hide();
