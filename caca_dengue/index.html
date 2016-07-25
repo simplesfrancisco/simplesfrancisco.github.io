@@ -1,13 +1,35 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Caça Dengue</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+	<title>Map</title>
+	<link rel="stylesheet" href="map.css">
+	<script type="text/javascript" src="jquery-3.1.0.min.js"></script>
 	<meta name="viewport" content="width=device-width, user-scalable=no">
 </head>
-<body style="text-align: center; padding-top: 10%;">
-	<i class="fa fa-spin fa-spinner"></i>
+<body>
+	<div class="arenaHead">
+			Ache o mosquito no ambiente abaixo
+	</div>
+	<div class="arena">
+		
+	</div>
+	<div class="arenaFooter">
+		<h1>Nivel: <span clsas="tentativas">1</span></h1>
+	</div>
+	<div class="arenaGameOver ">
+		<span class="arenaInner">
+			Você perdeu!
+			<a onclick="recomecar()" class="button">Recomeçar</a>
+		</span>
+	</div>
+	<div class="arenaStart">
+		<span class="arenaInner">
+			Caça Dengue
+		<a onclick="jogar()" class="button">Jogar</a>
+		</span>
+	</div>
+	<script type="text/javascript" src="map.js"></script>
+	<script type="text/javascript" src="answers.js"></script>
 </body>
 </html>
